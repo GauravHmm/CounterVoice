@@ -1,0 +1,258 @@
+.landing {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  padding: 28px clamp(22px, 6vw, 88px);
+}
+.landing nav,
+.shell header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 18px;
+}
+.brand {
+  font-family: var(--serif);
+  font-size: 1.55rem;
+}
+.landing section {
+  max-width: 850px;
+  align-self: center;
+  padding: 80px 0;
+}
+.landing section > p:not(.kicker) {
+  font-size: 1.25rem;
+  max-width: 650px;
+  color: var(--muted);
+}
+.kicker {
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  letter-spacing: 0.13em;
+  color: var(--accent);
+  font-weight: 700;
+}
+.actions {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-top: 28px;
+}
+.actions a {
+  color: var(--ink);
+  text-underline-offset: 5px;
+}
+.landing aside {
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
+  display: flex;
+  gap: 18px;
+  color: var(--muted);
+}
+.landing aside b {
+  color: var(--accent);
+}
+.shell {
+  min-height: 100vh;
+  padding: 28px clamp(22px, 6vw, 88px);
+}
+.setup {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 10vw;
+  max-width: 1150px;
+  margin: 9vh auto;
+}
+.setup > div p:not(.kicker) {
+  color: var(--muted);
+  font-size: 1.1rem;
+  max-width: 370px;
+}
+.setup form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  align-content: start;
+}
+.setup label {
+  display: grid;
+  gap: 8px;
+  font-size: 0.83rem;
+  color: var(--muted);
+}
+.wide {
+  grid-column: 1/-1;
+}
+.setup button {
+  width: max-content;
+}
+.error {
+  max-width: 760px;
+  margin: 0 auto;
+  color: #8a261b;
+  border-top: 1px solid currentColor;
+  padding-top: 12px;
+}
+.session {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.65fr) minmax(0, 1.6fr);
+  gap: 7vw;
+  max-width: 1200px;
+  margin: 70px auto;
+}
+.summary {
+  border-top: 2px solid var(--ink);
+  padding-top: 15px;
+}
+.summary > b {
+  font-family: var(--serif);
+  font-size: 1.45rem;
+  line-height: 1.1;
+  display: block;
+}
+.summary details {
+  color: var(--muted);
+  margin-top: 35px;
+  border-top: 1px solid var(--line);
+  padding-top: 13px;
+}
+.summary small {
+  display: block;
+  margin-top: 30px;
+  color: var(--muted);
+}
+.arena {
+  border-top: 1px solid var(--line);
+  padding-top: 20px;
+}
+.arena h1 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  max-width: 900px;
+}
+.arena > p {
+  max-width: 700px;
+  color: var(--muted);
+}
+.arena textarea {
+  margin-top: 38px;
+  min-height: 130px;
+}
+.transcript {
+  margin-top: 35px;
+  border-top: 1px solid var(--line);
+}
+.transcript div {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+}
+.transcript b {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+}
+.transcript p {
+  margin: 6px 0 18px;
+}
+.history,
+.report {
+  max-width: 850px;
+  margin: 70px auto;
+}
+.history > p {
+  color: var(--muted);
+}
+.history article {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--line);
+  padding: 18px 0;
+}
+.history article div {
+  max-width: 60%;
+}
+.history small {
+  display: block;
+  color: var(--muted);
+  margin-top: 8px;
+}
+.report > p {
+  font-size: 1.15rem;
+  max-width: 750px;
+}
+.report hr {
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: 50px 0;
+}
+.report li {
+  margin: 10px 0;
+  line-height: 1.4;
+}
+.rubric {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid var(--line);
+}
+.rubric article {
+  border-bottom: 1px solid var(--line);
+  padding: 18px;
+}
+.rubric article:nth-child(odd) {
+  border-right: 1px solid var(--line);
+}
+.rubric p {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.note {
+  color: var(--muted);
+  font-size: 0.85rem !important;
+  margin-top: 25px;
+}
+@media (max-width: 720px) {
+  .setup,
+  .session {
+    grid-template-columns: 1fr;
+    margin: 45px auto;
+    gap: 35px;
+  }
+  .setup form {
+    grid-template-columns: 1fr;
+  }
+  .wide {
+    grid-column: auto;
+  }
+  .landing aside {
+    display: block;
+  }
+  .landing aside b {
+    margin-left: 12px;
+  }
+  .rubric {
+    grid-template-columns: 1fr;
+  }
+  .rubric article:nth-child(odd) {
+    border-right: 0;
+  }
+  .history article {
+    flex-wrap: wrap;
+  }
+  .history article div {
+    max-width: 100%;
+  }
+}
+@media print {
+  .shell {
+    padding: 0;
+  }
+  .shell header {
+    display: none !important;
+  }
+  .report {
+    margin: 0;
+  }
+}
